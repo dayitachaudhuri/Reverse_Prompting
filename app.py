@@ -3,6 +3,8 @@ import json
 import random
 from Levenshtein import ratio
 
+st.subheader("Natural Language Processing Lab, CDS, IISc")
+
 def get_similarity(str1, str2):
     return ratio(str1, str2) 
 
@@ -44,10 +46,10 @@ def check_answer():
         st.error(f"❌ Incorrect! Try Again{similarity}.")
 
 # Streamlit UI
-st.title("Guess the Prompt Game")
+st.title("Promp Hunt")
 st.subheader("Guess the correct prompt for the given response:")
 
-st.write(f"**Response:** {random_response}")
+st.write(random_response)
 
 st.text_input("Your Guess:", key="answer")
 
